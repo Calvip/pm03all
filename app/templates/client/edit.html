@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST" style="margin-top: 4.5rem;">
+  <h2>Редактирование клиента</h2>
+  <input type="hidden" id="id-input" name="id" value="{{client.id}}">
+  <div class="form-group">
+    <label for="first-name">Фамилия</label>
+    <input type="text" class="form-control" id="first-name-input" name="first-name" placeholder="Пупкин" value="{{client.first_name}}">
+  </div>
+  <div class="form-group">
+    <label for="last-name">Имя</label>
+    <input type="text" class="form-control" id="last-name-input" name="last-name" placeholder="Василий" value="{{client.last_name}}">
+  </div>
+  <div class="form-group">
+    <label for="patronymic">Отчество</label>
+    <input type="text" class="form-control" id="patronymic-input" name="patronymic" placeholder="Иванович" value="{{client.patronymic}}">
+  </div>
+  <div class="form-group">
+    <label for="account_number">Номер счёта</label>
+    <input type="text" class="form-control" id="account_number-input" name="account_number" placeholder="999999999"  value="{{client.account_number}}" maxlength="9">
+  </div>
+  <button type="submit" class="btn btn-success mt-2">Изменить</button>
+</form>
+{% endblock %}

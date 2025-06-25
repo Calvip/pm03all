@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST" style="margin-top: 4.5rem;">
+  <h2>Добавление пользователя</h2>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Логин</label>
+    <input type="text" class="form-control" id="username-input" name="username" placeholder="vasyapupkin3000">
+  </div>
+  <div class="form-group mt-2">
+    <label for="password-input">Пароль</label>
+    <input type="password" class="form-control" id="password-input" name="password">
+  </div>
+  <div class="form-group">
+    <label for="telegram-id-input">Telegram ID</label>Add commentMore actions
+    <input type="text" class="form-control" id="telegram-id-input" name="telegram_id" placeholder="123456789">
+  </div>
+  <button type="submit" class="btn btn-success mt-2">Добавить</button>
+</form>
+{% endblock %}

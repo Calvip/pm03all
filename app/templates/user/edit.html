@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST" style="margin-top: 4.5rem;">
+  <h2>Редактирование пользователя</h2>
+  <input type="hidden" id="id-input" name="id" value="{{user.id}}">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Логин</label>
+    <input type="text" class="form-control" id="username-input" name="username" placeholder="mamut" value="{{user.username}}">
+  </div>
+  <div class="form-group mt-2">
+    <label for="password-input">Пароль</label>
+    <input type="password" class="form-control" id="password" name="password" value="{{user.password}}">
+  </div>
+  <div class="form-group">Add commentMore actions
+    <label for="telegram-id-input">Telegram ID</label>
+    <input type="text" class="form-control" id="telegram-id-input" name="telegram_id" placeholder="123456789" value="{{user.telegram_id}}">
+  </div>
+  <button type="submit" class="btn btn-success mt-2">Изменить</button>
+</form>
+{% endblock %}

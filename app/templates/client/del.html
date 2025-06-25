@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST" style="margin-top: 4.5rem;">
+  <h2>Удаление клиента</h2>
+  <input type="hidden" id="id-input" name="id" value="{{student.id}}">
+  <p>Вы уверены?</p>
+  <button type="submit" class="btn btn-success">Удалить</button>
+</form>
+{% endblock %}

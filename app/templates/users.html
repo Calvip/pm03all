@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Пользователи{% endblock %}
+{% block content %}
+<section style="margin-top: 4.5rem;">
+    <h2>Пользователи системы</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Логин</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>
+                    <a class="btn btn-outline-warning" href="/user/edit/{{user.id}}">Изменить</a>
+                    <a class="btn btn-outline-danger" href="/user/del/{{user.id}}">Удалить</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a class="btn btn-success" href="/user/add">Добавить</a>
+</section>
+{% endblock %}
